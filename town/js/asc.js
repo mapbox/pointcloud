@@ -10,7 +10,7 @@
   X, Y, Z, R, G, B<br />
   X, Y, Z, I, J, K<br />
   X, Y, Z, R, G, B, I, J, K<br />
-  <br />
+  
   Where XYZ refers to vertices, RGB refers to colors and IJK refers to normal
   vectors. Vertices are always present and color components range from 0 to 255.
   
