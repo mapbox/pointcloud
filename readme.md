@@ -1,7 +1,7 @@
 Visualizations:
-* [Town Pointcloud](https://github.com/mapbox/pointcloud/town)
-* [Town Elevation](https://github.com/mapbox/pointcloud/town/elevation)
-* [Town Imagery](https://github.com/mapbox/pointcloud/town/imagery)
-* [Glacier Pointcloud](https://github.com/mapbox/pointcloud/glacier)
-* [Glacier Elevation](https://github.com/mapbox/pointcloud/glacier/elevation)
-* [Glacier Imagery](https://github.com/mapbox/pointcloud/glacier/imagery)
+* [Town Pointcloud](http://mapbox.github.io/pointcloud/town/)
+* [Town Elevation](http://mapbox.github.io/pointcloud/town/elevation)
+* [Town Imagery](http://mapbox.github.io/pointcloud/town/imagery)
+* [Glacier Pointcloud](http://mapbox.github.io/pointcloud/glacier)
+* [Glacier Elevation](http://mapbox.github.io/pointcloud/glacier/elevation)
+* [Glacier Imagery](http://mapbox.github.io/pointcloud/glacier/imagery)
