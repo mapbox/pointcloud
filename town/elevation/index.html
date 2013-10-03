@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Drone Mapping - Elevation</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+  <script src='//api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.js'></script>
+  <link href='//api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.css' rel='stylesheet' />
+  <!--[if lte IE 8]>
+    <link href='//api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.ie.css' rel='stylesheet' >
+  <![endif]-->
+  
+  <meta name='twitter:site' content='@MapBox' />
+  <meta property='og:site_name' content='MapBox' />
+  <meta name='twitter:url' content='http://mapbox.com/labs/point-cloud/town/elevation' />
+  <meta name='twitter:url' content='http://mapbox.com/labs/point-cloud/town/elevation' />
+  <meta name='twitter:title' content='MapBox Partners with Drone Adventures to Bring UAV Imagery to the Web' />
+  <meta property='og:title' content='MapBox Partners with Drone Adventures to Bring UAV Imagery to the Web' />
+  <meta name='twitter:description' content='Here at MapBox we&#39;re stepping up our work with drone companies, we&#39;ve partnered with Drone Adventures to bring the data of their latest flight on the slopes of the Matterhorn...' />
+  <meta property='og:description' content='Here at MapBox we&#39;re stepping up our work with drone companies, we&#39;ve partnered with Drone Adventures to bring the data of their latest flight on the slopes of the Matterhorn...' />
+  
+  <meta name='twitter:image' content='http://c.tiles.mapbox.com/v3/bobbysud.map-jyb1joq8,bobbysud.town-pointcloud,bobbysud.map-skv9sltr/14/8517/5805.png' />
+  <meta property='og:image' content='http://c.tiles.mapbox.com/v3/bobbysud.map-jyb1joq8,bobbysud.town-pointcloud,bobbysud.map-skv9sltr/14/8517/5805.png' />
+  <meta name='twitter:card' content='summary_large_image' />
+  <meta property='og:type' content='website' />
+
+  <style>
+    body { margin:0; padding:0; }
+    #map { position:absolute; top:0; bottom:0; width:100%; }
+    .map-tooltip {
+      min-width:135px;
+    }
+  </style>
+</head>
+<body>
+<div id='map'></div>
+<script type='text/javascript'>
+  
+  var map = L.mapbox.map('map', 'bobbysud.map-jyb1joq8,bobbysud.town-pointcloud,bobbysud.map-skv9sltr',{
+    scrollWheelZoom:false
+  }).setView([46.3502,7.1596],15)
+
+  map.attributionControl.addAttribution('<a href="http://mapbox.com/blog/drone-mapping/" target="_blank">A MapBox Project</a>');
+
+</script>
+</body>
+</html>
