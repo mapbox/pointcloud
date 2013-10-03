@@ -119,4 +119,4 @@ $(function(){
     $('body').append('Your browser does not support this demo. Here is what you are missing:')
     $('body').append('<img src="css/error.gif" id="no-canvas" />')
   }
-})
+});

@@ -9,8 +9,8 @@
   
     <meta name='twitter:site' content='@MapBox' />
     <meta property='og:site_name' content='MapBox' />
-    <meta name='twitter:url' content='http://mapbox.com/labs/point-cloud/town/' />
-    <meta name='twitter:url' content='http://mapbox.com/labs/point-cloud/town/' />
+    <meta name='twitter:url' content='http://mapbox.com/pointcloud/town/' />
+    <meta name='twitter:url' content='http://mapbox.com/pointcloud/town/' />
     <meta name='twitter:title' content='MapBox Partners with Drone Adventures to Bring UAV Imagery to the Web' />
     <meta property='og:title' content='MapBox Partners with Drone Adventures to Bring UAV Imagery to the Web' />
     <meta name='twitter:description' content='Here at MapBox we&#39;re stepping up our work with drone companies, we&#39;ve partnered with Drone Adventures to bring the data of their latest flight on the slopes of the Matterhorn...' />
@@ -24,15 +24,26 @@
   </head>
   <body>
   
-  <canvas id='canvas'></canvas>
-  
-  <div id='info'>
-    <span>Points: </span>[<span id='townStatus'></span>] - <span id='townNumPoints'>0</span> 
-    <div id='progressbar1'></div>
-    <div id='fps'></div>
-  </div>
+    <canvas id='canvas'></canvas>
+    
+    <div id='info'>
+      <span>Points: </span>[<span id='townStatus'></span>] - <span id='townNumPoints'>0</span> 
+      <div id='progressbar1'></div>
+      <div id='fps'></div>
+    </div>
 
-  <a href="http://mapbox.com/blog/drone-mapping" class='attribution'>A MapBox Project</a>
-  
+    <div class='attribution'>About this map</div>
+
+    <div class='modal'>This is a project by <a href='http://mapbox.com'>MapBox</a> in conjuction with <a href='http://www.droneadventures.org/'>Drone Adventures</a>. This data was collected via a <a href='http://www.sensefly.com/'>Sensefly Drone</a>. More information about this project can read on <a href='http://mapbox.com/blog/drone-mapping'>MapBox.com</a></div>
+    
   </body>
+
+  <script>
+    $('.attribution').click(function(){
+      $('.modal').fadeIn();
+      $('canvas, img').click(function(){
+        $('.modal').fadeOut();
+      });
+    });
+  </script>
 </html>
