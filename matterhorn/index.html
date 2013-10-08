@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>    
+    <meta charset='UTF-8'>
+    <script type='text/javascript' src='js/jquery-1.4.2.min.js'></script>
+    <link rel='stylesheet' type='text/css' href='css/style.css' />
+    <script src='js/xbps.js'></script>
+    <script src='js/site.js'></script>
+  
+    <meta name='twitter:site' content='@MapBox' />
+    <meta property='og:site_name' content='MapBox' />
+    <meta name='twitter:url' content='http://mapbox.com/pointcloud/matterhorn/' />
+    <meta name='twitter:url' content='http://mapbox.com/pointcloud/matterhorn/' />
+    <meta name='twitter:title' content='MapBox Partners with Drone Adventures to Bring UAV Imagery to the Web' />
+    <meta property='og:title' content='MapBox Partners with Drone Adventures to Bring UAV Imagery to the Web' />
+    <meta name='twitter:description' content='Here at MapBox we&#39;re stepping up our work with drone companies, we&#39;ve partnered with Drone Adventures to bring the data of their latest flight on the slopes of the Matterhorn...' />
+    <meta property='og:description' content='Here at MapBox we&#39;re stepping up our work with drone companies, we&#39;ve partnered with Drone Adventures to bring the data of their latest flight on the slopes of the Matterhorn...' />
+
+    <meta name='twitter:image' content='http://i.imgur.com/hMClhDZ.gif' />
+    <meta property='og:image' content='http://i.imgur.com/hMClhDZ.gif' />
+    <meta name='twitter:card' content='summary_large_image' />
+    <meta property='og:type' content='website' />
+
+  </head>
+  <body>
+  
+    <canvas id='canvas'></canvas>
+    
+    <div id='info'>
+      <span>Points: </span>[<span id='matterhornStatus'></span>] - <span id='matterhornNumPoints'>0</span> 
+      <div id='progressbar1'></div>
+      <div id='fps'></div>
+    </div>
+
+    <div class='attribution'>About this Map</div>
+  
+    <div class='modal'>This is a project by <a href='http://mapbox.com'>MapBox</a> in conjuction with <a href='http://www.droneadventures.org/'>Drone Adventures</a>. This data was collected via a <a href='http://www.sensefly.com/'>Sensefly Drone</a>. More information about this project can read on <a href='http://mapbox.com/blog/drone-mapping'>MapBox.com</a></div>
+  
+  </body>
+
+  <script>
+    $('.attribution').click(function(){
+      $('.modal').fadeIn();
+      $('canvas, img').click(function(){
+        $('.modal').fadeOut();
+      });
+    });
+  </script>
+
+</html>
