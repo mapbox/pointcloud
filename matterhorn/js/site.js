@@ -7,7 +7,7 @@ var matterhornRot = 0;
 var buttonDown = false;
 var zoomed = -50;
 var rot = [0, 0];
-var curCoords = [0, 50];
+var curCoords = [0, 0];
  
 function zoom(amt){
   zoomed += amt * 2 * -1;
