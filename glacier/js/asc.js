@@ -264,7 +264,6 @@ var ASCParser = (function() {
         if(verts){attributes["ps_Vertex"] = verts;}
         if(cols){attributes["ps_Color"] = cols;}
         if(norms){attributes["ps_Normal"] = norms;}
-        
         parse(theParser, attributes);
       }
     };

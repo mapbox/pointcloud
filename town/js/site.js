@@ -5,17 +5,22 @@ var townProgObj;
 var townRot = 0;
 
 var buttonDown = false;
-var zoomed = -15;
-var rot = [0, -20];
+var zoomed = -40;
+var rot = [0, 0];
 var curCoords = [0, 0];
 
 function zoom(amt){
-  zoomed += amt * 2 * -1;
+    if(zoomed>=-0){
+      zoomed += -.5
+    }else{
+      zoomed += amt * 2 * -1;     
+    }
 }
 
 function mousePressed(){
   curCoords[0] = ps.mouseX;
   curCoords[1] = ps.mouseY;
+
   buttonDown = true;
 }
 
@@ -60,6 +65,7 @@ function render() {
     
     curCoords[0] = ps.mouseX;
     curCoords[1] = ps.mouseY;
+
   }
 
   ps.clear();
@@ -68,7 +74,7 @@ function render() {
   ps.translate(0, 0, zoomed);  
   ps.rotateY(rot[0]);
   ps.rotateX(rot[1]);
-  ps.pointSize(8);
+  ps.pointSize(3);
   ps.pushMatrix();
   
   ps.uniformi('uOutline', false);
@@ -91,11 +97,12 @@ function render() {
   updatePointCount(town, 'townNumPoints');
 }
 
+
 function start(){
 
     ps = new PointStream();
     ps.setup(document.getElementById('canvas'));
-    ps.background('red');
+    ps.background('black');
 
     var fragShaderFixed = ps.getShaderStr('shaders/fixed_function.fs');
     var vertShaderFixed = ps.getShaderStr('shaders/fixed_function.vs');
@@ -116,7 +123,8 @@ $(function(){
     document.createElement('canvas').getContext('2d');
     start()
   } catch (e) {
-    $('body').append('Your browser does not support this demo. Here is what you are missing:')
-    $('body').append('<img src="css/error.gif" id="no-canvas" />')
+    $('body').append('Your browser does not support this demo. Here is what you are missing:');
+    $('body').append('<img src="css/error.gif" id="no-canvas" />');
   }
+
 });
