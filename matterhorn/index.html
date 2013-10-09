@@ -15,7 +15,6 @@
     <meta property='og:title' content='MapBox Partners with Drone Adventures to Bring UAV Imagery to the Web' />
     <meta name='twitter:description' content='Here at MapBox we&#39;re stepping up our work with drone companies, we&#39;ve partnered with Drone Adventures to bring the data of their latest flight on the slopes of the Matterhorn...' />
     <meta property='og:description' content='Here at MapBox we&#39;re stepping up our work with drone companies, we&#39;ve partnered with Drone Adventures to bring the data of their latest flight on the slopes of the Matterhorn...' />
-
     <meta name='twitter:image' content='http://i.imgur.com/hMClhDZ.gif' />
     <meta property='og:image' content='http://i.imgur.com/hMClhDZ.gif' />
     <meta name='twitter:card' content='summary_large_image' />
@@ -27,7 +26,10 @@
     <canvas id='canvas'></canvas>
     
     <div id='info'>
-      <span>Points: </span>[<span id='matterhornStatus'></span>] - <span id='matterhornNumPoints'>0</span> 
+      <div>
+        <span id='matterhornStatus'></span><span class='blink'>▌</span>
+      </div>
+      <span>Points: </span><span id='matterhornNumPoints'>0</span> 
       <div id='progressbar1'></div>
       <div id='fps'></div>
     </div>

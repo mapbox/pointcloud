@@ -25,11 +25,12 @@ function mouseReleased(){
  
 function updateStatus(cloud, str){
   var status = document.getElementById(str);
+  var info = document.getElementById('info')
   status.innerHTML = '';
   switch(cloud.getStatus()){
-    case 1: status.innerHTML = 'STARTED';break;
-    case 2: status.innerHTML = 'STREAMING';break;
-    case 3: status.innerHTML = 'COMPLETE';break;
+    case 1: status.innerHTML = 'Started';break;
+    case 2: status.innerHTML = 'Loading Point Cloud';break;
+    case 3: info.style.display = 'none';break;
     default:break;
   }
 }
