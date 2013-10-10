@@ -36,17 +36,16 @@ canvas{
 }
 
 .modal {
-  position: absolute;
-  top:15%;
-  left:35%;
-  width: 30%;
-  display: none;
-  background: white;
-  border-radius:4px;
-  border:1px solid #ddd;
-  color:black;
+  position: relative;
+  max-width: 355px;
+  background: #FFF;
+  border-radius: 4px;
+  border: 1px solid #DDD;
+  color: #000;
   padding: 10px 20px;
   line-height: 24px;
+  margin: 15% auto;
+  display: none;
 }
 
 .modal a {

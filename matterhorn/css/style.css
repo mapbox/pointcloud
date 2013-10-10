@@ -11,7 +11,11 @@ html {
 }
 
 canvas{
-	position: absolute;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
 }
 
 #no-canvas {
@@ -19,12 +23,11 @@ canvas{
 	height: 100%;
 }
 
-#info {
+#info,h1 {
 	color: #FFF;
   font-family: Monaco, monospace;
-  font-size: 12px;
   font-weight: bold;
-  position: absolute;
+  position: relative;
   text-transform: uppercase;
 }
 

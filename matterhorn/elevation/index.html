@@ -42,7 +42,7 @@
       <li>Street data: <a href='http://openstreetmap.orf'>OpenStreetMap Contributors</a></li>
       <li>Global satellite layer: <a href='http://www.digitalglobe.com/'>Digital Globe</a></li>
       <li>Map design: <a href='http://mapbox.com'>MapBox</a></li>
-      <li>Read more on: <a href='https://mapbox.com/blog/drone-mapping'>MappBox Partners With Drone Adventures to Bring UAV Imagery to the Web</a></li>
+      <li>Read more on: <a href='https://mapbox.com/blog/droneadventures-matterhorn-imagery-on-the-web'>MappBox Partners With Drone Adventures to Bring UAV Imagery to the Web</a></li>
     </ul>
   </div>
 
@@ -50,12 +50,25 @@
 
 <script type='text/javascript'>
 
-  var map = L.mapbox.map('map', 'bobbysud.map-l4i2m7nd,bobbysud.matterhorn-elevation',{
-    scrollWheelZoom:false,
-    attributionControl:false
+  var elevation = L.mapbox.tileLayer('bobbysud.map-l4i2m7nd,bobbysud.matterhorn-elev');
+  var base = L.mapbox.tileLayer('bobbysud.map-l4i2m7nd');
+
+  var map = L.mapbox.map('map', null, {
+      attributionControl:false,
+      scrollWheelZoom:false,
+      layers:[elevation],
+      maxZoom:18
   })
     .setView([45.9823,7.6652],13)
 
+    var gridLayer = L.mapbox.gridLayer('bobbysud.matterhorn-elev');
+    map.addLayer(gridLayer);
+    map.addControl(L.mapbox.gridControl(gridLayer));
+
+  L.control.layers({
+    'Elevation': elevation,
+    'Base Map': base
+  }).addTo(map);
 
   $('.attribution').click(function(e){
     e.preventDefault();

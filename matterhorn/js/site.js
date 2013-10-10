@@ -28,7 +28,7 @@ function updateStatus(cloud, str){
   var info = document.getElementById('info')
   status.innerHTML = '';
   switch(cloud.getStatus()){
-    case 1: status.innerHTML = 'Started';break;
+    case 1: status.innerHTML = 'Starting';break;
     case 2: status.innerHTML = 'Loading Point Cloud';break;
     case 3: info.style.display = 'none';break;
     default:break;
