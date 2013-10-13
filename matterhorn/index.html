@@ -9,12 +9,12 @@
   
     <meta name='twitter:site' content='@MapBox' />
     <meta property='og:site_name' content='MapBox' />
-    <meta name='twitter:url' content='https://mapbox.com/pointcloud/matterhorn/' />
-    <meta name='twitter:url' content='https://mapbox.com/pointcloud/matterhorn/' />
-    <meta name='twitter:title' content='MapBox Partners with Drone Adventures to Bring UAV Imagery to the Web' />
-    <meta property='og:title' content='MapBox Partners with Drone Adventures to Bring UAV Imagery to the Web' />
-    <meta name='twitter:description' content='Here at MapBox we&#39;re stepping up our work with drone companies, we&#39;ve partnered with Drone Adventures to bring the data of their latest mission on the Matterhorn to the web.' />
-    <meta property='og:description' content='Here at MapBox we&#39;re stepping up our work with drone companies, we&#39;ve partnered with Drone Adventures to bring the data of their latest mission on the Matterhorn to the web.' />
+    <meta name='twitter:url' content='/blog/sensefly-drone-mapping-matterhorn' />
+    <meta property='og:url' content='/blog/sensefly-drone-mapping-matterhorn' />
+    <meta name='twitter:title' content='Flying the Matterhorn with Drones - Working with Sensefly&#39;s UAV Imagery' />
+    <meta property='og:title' content='Flying the Matterhorn with Drones - Working with Sensefly&#39;s UAV Imagery' />
+    <meta name='twitter:description' content='We are working with Sensefly to map the data from their latest mission on the Matterhorn. Co-founder Adam Klaptocz launching a Sensefly eBee from the summit of the Matterhorn. Flying...' />
+    <meta property='og:description' content='We are working with Sensefly to map the data from their latest mission on the Matterhorn. Co-founder Adam Klaptocz launching a Sensefly eBee from the summit of the Matterhorn. Flying...' />
     <meta name='twitter:image' content='https://i.imgur.com/hMClhDZ.gif' />
     <meta property='og:image' content='https://i.imgur.com/hMClhDZ.gif' />
     <meta name='twitter:card' content='summary_large_image' />
@@ -36,8 +36,12 @@
     </div>
 
     <div class='attribution'>About this map</div>
+
+    <div class='modal load'>
+      <h2 class='center'>Click To Load<br>Point-Cloud</h2>
+    </div>
   
-    <div class='modal'>
+    <div class='modal info'>
         <b><a href='https://mapbox.com/blog/droneadventures-matterhorn-imagery-on-the-web'>MapBox Partners With Drone Adventures to Bring UAV Imagery to the Web</a></b>
         <ul>
           <li>3d data: <a href='http://www.droneadventures.org/'>Drone Adventures</a>.</li>
@@ -50,7 +54,7 @@
 
   <script>
     $('.attribution').click(function(){
-      $('.modal').fadeIn();
+      $('.modal.info').fadeIn();
       $('canvas, img').click(function(){
         $('.modal').fadeOut();
       });
