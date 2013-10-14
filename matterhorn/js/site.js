@@ -131,9 +131,15 @@ $(function(){
       });
 
     }else{
-      $('.modal.load').hide();
-      $('body').html('<p>Your browser does not support this demo. Here is what you are missing:</p><img src="css/error.gif" id="no-canvas" />');
-      start();
+      try {
+        document.createElement('canvas').getContext('2d');    
+        start();
+      } catch(e) {
+        $('#info, h1').hide()
+        $('.modal.load').hide();
+        $('body').html('<p>Your browser does not support this demo. Here is what you are missing:</p><img src="css/error.gif" id="no-canvas" />');
+      }
+      
     }
 
 })
