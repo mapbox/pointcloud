@@ -5,6 +5,6 @@
 * [Glacier Pointcloud](http://mapbox.github.io/pointcloud/glacier)
 * [Glacier Elevation](http://mapbox.github.io/pointcloud/glacier/elevation)
 * [Glacier Imagery](http://mapbox.github.io/pointcloud/glacier/imagery)
-* [Matterhorn Pointcloud](http://mapbox.github.io/natterhorn/)
+* [Matterhorn Pointcloud](http://mapbox.github.io/pointcloud/matterhorn)
 * [Matterhorn Elevation](http://mapbox.github.io/pointcloud/matterhorn/elevation)
 * [Matterhorn Imagery](http://mapbox.github.io/pointcloud/matterhorn/imagery)
